@@ -36,3 +36,5 @@ CMD [ "/usr/sbin/init" ]
 #	docker build --rm --no-cache --build-arg http_proxy="http://USERNAME:PASSWORD@PROXYURL:PORT/" -t TAG .
 #RUN-NOTE:
 # docker run -d --privileged -v /PATH/TO/HTML:/var/www/app -p 80:80 TAG
+# or with "relative" path (hacky)
+# docker run -d --privileged -v $(pwd)/var/www/app:/var/www/app -p 80:80 TAG
